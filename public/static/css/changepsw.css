@@ -1,0 +1,19 @@
+body{
+  background: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+.containerLocation{
+		padding:4em;
+		width: 36%;
+		margin:0 auto;
+}
+body h1 {
+  color:#fff;
+  text-align: center;
+  padding: 1em 0;
+  font-size: 2.9em;
+}
+.locationCenter{
+	width: 28%;
+	margin:0 auto;
+}
