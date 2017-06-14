@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>diary</title>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+	 $(document).ready(function(){
+	      $('.parallax').parallax();
+	    });
+	 $(document).ready(function(){
+	 		var length = $('.parallax').height();
+	 		console.log(length);
+	      $('.cardLocation').css("top",length-170);
+	      	length=$('.parallax').width();
+	      	console.log(length);
+	      	 $('.cardLocation').css("left",length/2-164.5);
+
+	    });
+</script>
+<style type="text/css">
+	 .parallax-container {
+      height: 500px;
+    }
+    .cardLocation{
+    	position:absolute;  	
+    	width:329px;
+    	height:162px;
+    	
+    }
+    .cardSize{
+    	width:329px;
+    	height:329px;
+    }
+    body h1{
+    	  color:#fff;
+		  text-align: center;
+		  padding: 1em 0;
+		  font-size: 2.9em;
+    }
+
+</style>
+</head>
+<body>
+	<div class="parallax-container">
+      <div class="parallax"><img src="/tp5/public/static/images/bear3.jpg"></div>
+    </div>
+    <!-- 卡片-->
+    <div class="row cardLocation">
+    <div class="col s12 m6">
+      <div class="card cardSize z-depth-5">
+        <div class="card-image ">
+          <img src="/tp5/public/static/images/bear1.jpg">       
+        </div>
+        <div class="card-content ">
+          <h4 style="text-align: center;">diary</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+  <!-- -->
+    <div style="background: " >
+    	<div class="container" style="height: 700px;width: 50%">
+    	<h1></h1>
+    	<br><br>
+    		<div class="row">
+    			  <div class="col s2" style="text-align: center">
+
+    			  <h4>2017.6.2</h4>
+    			  <h5>22:28</h5>
+    			  </div>
+	    		  <div class="col s7">
+	    		   <p>oh,this is a test!!!!!!</p>
+	    		  </div>
+			      <div class="col s3">
+			      	3
+			      </div>
+		     </div>
+    	</div>
+    </div>
+    <div style="height: 400px"></div> 
+    <div style="height: 400px"></div> 
+    <div style="height: 400px"></div>
+
+    
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+</body>
+</html>

@@ -1,10 +1,10 @@
 <?php 
 namespace app\index\model;
-
+use think\Db;
 class Admin extends \think\Model
 {
 	
-	public function changepsw($username,$oldpassword,$newpassword){
+	public static function changepsw($username,$oldpassword,$newpassword){
 		$result = db::where('password',$oldpassword);
 		if($result){
 			unset($_SESSION);
@@ -16,6 +16,10 @@ class Admin extends \think\Model
 		}else{
 			return false;
 		}
+	}
+	public static function showmsg(){
+		$lists=db::name('user')->where([])->order('username desc')->paginate(2);
+		return $lists;
 	}
 }	
  ?>

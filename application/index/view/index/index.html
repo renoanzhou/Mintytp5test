@@ -1,174 +1,255 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="en-US">
 <head>
-	<title></title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	{load href="/tp5/public/static/css/bootstrap.min.css" /}
-	
+<meta charset="UTF-8">
+<title>Caprice</title>
+{load href="/tp5/public/static/css/style11.css" /}
+<!-- <link rel="shortcut icon" type="image/x-icon" href="style/images/favicon.png" /> -->
+
+
+<link href='http://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="style/css/ie7.css" media="all" />
+<![endif]-->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="style/css/ie8.css" media="all" />
+<![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" type="text/css" href="style/css/ie9.css" media="all" />
+<![endif]-->
+{load href="/tp5/public/static/js/jquery-1.6.4.min.js" /}
+{load href="/tp5/public/static/js/ddsmoothmenu.js" /}
+{load href="/tp5/public/static/js/jquery.jcarousel.js" /}
+{load href="/tp5/public/static/js/jquery.prettyPhoto.js" /}
+{load href="/tp5/public/static/js/carousel.js" /}
+{load href="/tp5/public/static/js/jquery.flexslider-min.js" /}
+{load href="/tp5/public/static/js/jquery.masonry.min.js" /}
+{load href="/tp5/public/static/js/jquery.slickforms.js" /}
+<!-- <script type="text/javascript" src="style/js/jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="style/js/ddsmoothmenu.js"></script>
+<script type="text/javascript" src="style/js/jquery.jcarousel.js"></script>
+<script type="text/javascript" src="style/js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="style/js/carousel.js"></script>
+<script type="text/javascript" src="style/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="style/js/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="style/js/jquery.slickforms.js"></script> -->
+{load href="/tp5/public/static/images/logo.png" /}
 </head>
-	<style type="text/css">
-		html{
-			overflow-x:hidden; 
-		}
-		.textWhite{
-			color: #FFFFFF!important;
-		}
-		.brandCss{
-			margin-left: 100px;
-			line-height: 29px; 
-			font-size: 34px;
-			padding-left: 0px;
-			padding-right: 10px;
-			float: left;
-			list-style:none;
-		}
-		.nav-a-css{
-			line-height: 28px; 
-			font-size: 20px;
-			padding-top:0px;
-			padding-bottom: 0px;
-			padding-left: 10px;
-			padding-right: 10px;
-		}
-		.navCss{
-			width: 100%;
-			top:40px;
-		text-align: center;
-		}
-		.nav-li{
-			float: left;
-			list-style:none;
-		}
-		.nav-li1{
-			float: right;
-			list-style:none;
-		}
-		.nav-ul2{
-			float:right;
-			margin-right: 100px;
-		}.nav-li-a2{
-			font-size: 14px;
-		}
-		.nav-li-a1{
-			font-size: 14px;
-		}.search_div{
-			position:absolute;
-			top:35px;
-			right: 15px;
-			border: 1px solid #eee;
-			box-shadow: 0px 3px 2px rgba(0,0,0,0.15);
-			padding: 7px;
-			width: 200px;
-			display: ;
-
-		}.search_but{
-			  width: 30px;
-			  padding: 1px;
-			  margin-left: 0px;
-			  border: 0px;
-			  background: #FFFFFF;
-			}
-		.search-border input{
-			border: 0px;
-			outline:none;
-		}
-
-		.search-border{
-			border: 1px solid rgb(173, 173, 173);
-
-			
-		}
-		.indexBackground{
-			background-image:url("/tp5/public/static/images/bizhi3.jpg");
-			height: 900px;
-			position: absolute;
-			width: 100%;
-			z-index: 2;
-			
-		}.cover{
-			filter:alpha(opacity=50);  /* ie 有效*/
-			-moz-opacity:0.5; /* Firefox  有效*/
-			opacity: 0.5; /* 通用，其他浏览器  有效*/
-			position:absolute;
-			width: 100%;
-			height: 900px;
-			z-index: 3;
-			background: #000;
-		}.coverContentPublic{
-			position: absolute;
-			z-index: 4;
-		}.titleDiv{
-			
-			top: 200px;
-			color: #FFFFFF;
-			font-size:70px;
-			text-align: center;
-			width: 100%;
-			
-		}.btnTitle{
-			width: 100px;height:50px;
-		}
-
-
-	</style>
 <body>
- 	 <!-- 状态栏  -->
-
-	<div class="indexBackground"></div>
-	<div class="cover"></div>
-
-	<div class="coverContentPublic navCss">
-	  <!-- Content here -->
-		 <div class="row">
-		    <div class="col">
-		    	
-		      	<li class="text-white brandCss">Salted Fished</li>
-
-			
-		    </div>
-		    	    
-		    <div class="col">
-		      <ul class="nav-ul2">	
-		      		 <li class="nav-li"><a class="nav-link textWhite nav-a-css nav-li-a1" href="#">生活</a></li>
-				  <li class="nav-li"><a class="nav-link textWhite nav-a-css nav-li-a1" href="#">学习</a></li>
-				  <li class="nav-li"><a class="nav-link textWhite nav-a-css nav-li-a1" href="#">自我提升</a></li>		  		      	  
-				  <li class="nav-li"><a class="nav-link textWhite nav-a-css nav-li-a2" href="#" >注册</a></li>
-				  <li class="nav-li"><a class="nav-link textWhite nav-a-css nav-li-a2" href="#">登录</a></li>
-				  <a class="btn btn-primary nav-a-css nav-li-a2" style="float:left;line-height: 23px;height: 28px"><img src="/static/images/search2.png">
-		      	  <div class="search_div">
-		      	  		<form>
-		      	  			<div class="search-border">
-		      	  			<input type="text" name="search_input">
-		      	  			<button name="search_but" class=" search_but btn-secondary"><img src="/tp5/public/static/images/enter.png"></button>
-		      	  			</div>
-						</form>
-		      	  </div>
-		      	  </a>		  
-			  </ul>
-		    </div>
-		  </div>	   
-	</div>
-
-	<div class="container coverContentPublic titleDiv">
-		<h4 style="margin-bottom: 0px">salted fisheh also had a dream</h4>
-		<h0 style>Welcome to zzh‘s world！</h0>
-		<div><button class="btn btn-danger btnTitle"><strong>enter</strong></button></div>
-
-
-
-	</div>
-	  
-		
-	
-	
-	 	
+<!-- Begin Wrapper -->
+<div id="wrapper">
+	<!-- Begin Sidebar -->
+	<div id="sidebar">
+		 <div id="logo"><a href="index.html"><img src="/tp5/public/static/images1/logo.png" alt="Caprice" /></a></div>
+		 
+	<!-- Begin Menu -->
+    <div id="menu" class="menu-v">
+      <ul>
+        <li><a href="index.html" class="active">Home</a>
+        	<ul>
+        		<li><a href="index.html">Home w/ Carousel</a></li>
+        		<li><a href="index2.html">Home w/ Portfolio</a></li>
+        		<li><a href="index3.html">Home w/ Testimonials</a></li>
+        	</ul>
+        </li>
+        <li><a href="portfolio.html">Portfolio</a>
+        	<ul>
+        		<li><a href="portfolio.html">Portfolio 4 Columns</a></li>
+        		<li><a href="portfolio2.html">Portfolio 3 Columns</a></li>
+        		<li><a href="portfolio3.html">Portfolio 2 Columns</a></li>
+        		<li><a href="portfolio4.html">Portfolio 1 Column</a></li>
+        		<li><a href="portfolio-post.html">Portfolio Post</a></li>
+        	</ul>
+        </li>
+        <li><a href="blog.html">Blog</a>
+        	<ul>
+        		<li><a href="blog.html">Blog</a></li>
+        		<li><a href="blog2.html">Blog w/ Sidebar</a></li>
+        		<li><a href="post.html">Post</a></li>
+        		<li><a href="post2.html">Post w/ Sidebar</a></li>
+        	</ul>
+        </li>
+        <li><a href="buttons-boxes-images.html">Features</a>
+        	<ul>
+        		<li><a href="buttons-boxes-images.html">Buttons Boxes Images</a></li>
+        		<li><a href="tabs-toggle-table.html">Tabs Toggle Tables</a></li>
+        		<li><a href="testimonials.html">Testimonials</a></li>
+        		<li><a href="typography.html">Typography</a></li>
+        		<li><a href="service-icons.html">Service Icons</a></li>
+        	</ul>
+        </li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <!-- End Menu -->
    
- 
+    
+    <div class="sidebox">
+    <ul class="share">
+    	<li><a href="#"><img src="/tp5/public/static/images1/icon-rss.png" alt="RSS" /></a></li>
+    	<li><a href="#"><img src="/tp5/public/static/images1/icon-facebook.png" alt="Facebook" /></a></li>
+    	<li><a href="#"><img src="/tp5/public/static/images1/icon-twitter.png" alt="Twitter" /></a></li>
+    	<li><a href="#"><img src="/tp5/public/static/images1/icon-dribbble.png" alt="Dribbble" /></a></li>
+    	<li><a href="#"><img src="/tp5/public/static/images1/icon-linkedin.png" alt="LinkedIn" /></a></li>
+    </ul>
+    </div>
 
+    
+	</div>
+	<!-- End Sidebar -->
 	
-{load href="/tp5/public/static/js/jquery-3.1.1.min.js" /}
-{load href="/tp5/public/static/js/tether.min.js" /}
-{load href="/tp5/public/static/js/bootstrap.min.js" /}
+	<!-- Begin Content -->
+	<div id="content">
+	<h1 class="title">Welcome</h1>
+	<div class="line"></div>
+	<div class="intro">Nullam id dolor id nibh ultricies vehicula ut id elit. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</div>
+	
+	<!-- Begin Slider -->
+	<div id="slider">
 
+		<div class="flexslider">
+	    <ul class="slides">
+	    	<li><img src="/tp5/public/static/images1/art/slide1.jpg" alt=""/></li>
+	    	<li><img src="/tp5/public/static/images1/art/slide2.jpg" alt=""/></li>
+	    	<li><img src="/tp5/public/static/images1/art/slide3.jpg" alt=""/></li>
+	    	<li><img src="/tp5/public/static/images1/art/slide4.jpg" alt=""/></li>
+	    </ul>
+	  </div>
+
+	</div>
+    <!-- End Slider --> 
+    
+    
+    <h3>Ipsum Tortor Vestibulum Sollicitudin</h3>
+    
+    <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+    
+    
+   
+    <div class="one-half">
+    <h3><img src="/tp5/public/static/images1/icon-web.png" alt="" />Web Design</h3>
+    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+    </div>
+    
+    <div class="one-half last">
+    <h3><img src="/tp5/public/static/images1/icon-illus.png" alt="" />Illustration</h3>
+    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+    </div>
+    
+    <div class="clear"></div>
+    
+    
+    
+    <div class="one-half">
+    <h3><img src="/tp5/public/static/images1/icon-motion.png" alt="" />Motion Graphic</h3>
+    <p>Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.</p>
+    </div>
+    
+    <div class="one-half last">
+    <h3><img src="/tp5/public/static/images1/icon-pack.png" alt="" />Package Design</h3>
+    <p>Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, posuere velit aliquet. Donec id elit non mi porta gravida. </p>
+    </div>
+    
+    <div class="clear"></div>
+    
+    <div class="line"></div>
+    
+    <!-- Begin Latest Works -->
+    <h2>Latest Works</h2>
+    <div class="carousel">
+      <div id="carousel-scroll"><a href="#" id="prev"></a><a href="#" id="next"></a></div>
+      <ul>
+        <li> <a href="#"> <span class="overlay details"></span><img src="/tp5/public/static/images1/art/p1.jpg" alt="" /> </a> </li>
+        <li> <a href="#"> <span class="overlay details"></span><img src="/tp5/public/static/images1/art/p2.jpg" alt="" /> </a> </li>
+        <li> <a href="#"> <span class="overlay details"></span><img src="/tp5/public/static/images1/art/p3.jpg" alt="" /> </a> </li>
+        <li> <a href="#"> <span class="overlay details"></span><img src="/tp5/public/static/images1/art/p4.jpg" alt="" /> </a> </li>
+        <li> <a href="#"> <span class="overlay details"></span><img src="/tp5/public/static/images1/art/p5.jpg" alt="" /> </a> </li>
+        <li> <a href="#"> <span class="overlay details"></span><img src="/tp5/public/static/images1/art/p6.jpg" alt="" /> </a> </li>
+        <li> <a href="#"> <span class="overlay details"></span><img src="/tp5/public/static/images1/art/p7.jpg" alt="" /> </a> </li>
+        <li> <a href="#"> <span class="overlay details"></span><img src="/tp5/public/static/images1/art/p8.jpg" alt="" /> </a> </li>
+        <li> <a href="#"> <span class="overlay details"></span><img src="/tp5/public/static/images1/art/p9.jpg" alt="" /> </a> </li>
+        <li> <a href="#"> <span class="overlay details"></span><img src="/tp5/public/static/images1/art/p10.jpg" alt="" /> </a> </li>
+        <li> <a href="#"> <span class="overlay details"></span><img src="/tp5/public/static/images1/art/p11.jpg" alt="" /> </a> </li>
+        <li> <a href="#"> <span class="overlay details"></span><img src="/tp5/public/static/images1/art/p12.jpg" alt="" /> </a> </li>
+      </ul>
+    </div>
+    <!-- End Latest Works -->
+    
+    <div class="line"></div>
+    
+    <h3>Malesuada Condimentum Inceptos Vehicula</h3>
+    <p>Sed posuere consectetur est at lobortis. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+  
+    <ul>
+    <li>Sed posuere consectetur est at lobortis, Nullam id dolor id nibh ultricies vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </li>
+	<li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+    </ul>
+   
+    
+    <!-- Begin Footer -->
+    <div id="footer">
+  	<div class="footer-box one-third">
+  	<h3>Popular Posts</h3>
+			<ul class="popular-posts">
+				<li>
+
+					<a href="#"><img src="/tp5/public/static/images1/art/s1.jpg" alt="" /></a>
+					<h5><a href="#">Dolor Commodo Consectetur</a></h5>
+					<span>26 Aug 2013 | <a href="#">21 Comments</a></span>
+				</li>
+				
+				<li>
+
+					<a href="#"><img src="/tp5/public/static/images1/art/s2.jpg" alt="" /></a>
+					<h5><a href="#">Dolor Commodo Consectetur</a></h5>
+					<span>26 Aug 2013 | <a href="#">21 Comments</a></span>
+				</li>
+				
+				<li>
+					<a href="#"><img src="/tp5/public/static/images1/art/s3.jpg" alt="" /></a>
+					<h5><a href="#">Dolor Commodo Consectetur</a></h5>
+					<span>26 Aug 2013 | <a href="#">21 Comments</a></span>
+				</li>
+
+			</ul>
+  	</div>
+  	<div class="footer-box one-third">
+  	<h3>About</h3>
+  	<p>Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla.</p> 
+  	<p>Lorem Ipsum Dolor Sit
+          Moon Avenue No:11/21
+          Planet City, Earth<br>
+          <br>
+          <span class="lite1">Fax:</span> +555 797 534 01<br>
+          <span class="lite1">Tel:</span> +555 636 646 62<br>
+          <span class="lite1">E-mail:</span> name@domain.com</p>
+          
+          
+  	</div>
+  	
+  	<div class="footer-box one-third last">
+  	<h3>Custom Text</h3>
+  	<p>Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit. </p>
+  	<p>Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Curabitur blandit tempus porttitor.</p>
+  	</div>
+    </div>
+    <!-- End Footer -->
+    
+    
+	</div>
+	<!-- End Content -->
+	
+</div>
+<!-- End Wrapper -->
+<div class="clear"></div>
+{load href="/tp5/public/static/js/scripts.js" /}
+<!-- <script type="text/javascript" src="style/js/scripts.js"></script> -->
+<!--[if !IE]> -->
+{load href="/tp5/public/static/js/jquery.corner.js" /}
+<!-- <script type="text/javascript" src="style/js/jquery.corner.js"></script> -->
+<!-- <![endif]-->
+<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
 </body>
 </html>
