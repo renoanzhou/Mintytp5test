@@ -15,6 +15,11 @@ class Index extends Controller
         $this->assign('list',$list);
     	return $this->fetch('blog');
     }
+     public function blog2(){    
+        $id = request
+        trace($id);
+        return $this->fetch('blog2');
+    }
     public function diary(){
     	 return $this->fetch('Diary');
     }

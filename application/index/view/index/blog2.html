@@ -32,10 +32,6 @@
 <script type="text/javascript" src="style/js/jquery.flexslider-min.js"></script>
 <script type="text/javascript" src="style/js/jquery.masonry.min.js"></script>
 <script type="text/javascript" src="style/js/jquery.slickforms.js"></script> -->
-<script type="text/javascript">
-	
-
-</script>
 </head>
 <body>
 <!-- Begin Wrapper -->
@@ -112,155 +108,27 @@
 	
 	<!-- Begin Content -->
 	<div id="content">
-	<h1 class="title">Blog</h1>
+	{volist name='list' id='blog'}
+	<h1 class="title" style="text-align: center;">Blog</h1>
 	<div class="line"></div>
-	<div class="intro">Nullam id dolor id nibh ultricies vehicula ut id elit. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</div>
-		
-		{volist name='list' id='blog'}
-		<!-- Begin Post -->
-		<div class="post">
-		<!-- <a href="post.html"><img src="/tp5/public/static/images1/art/slide1.jpg" alt="" /></a> -->
-		
-		<!-- Begin Info -->
-		<div class="info">
-		<!-- Begin Date -->
-		<div class="date">
-			<div class="day">{$blog.day}</div>
-			<div class="month">{$blog.month}</div>
-		</div>
-		<!-- End Date -->
-		
-		<!-- Begin Meta -->
-		<div class="meta">
-			<h3 class="title"><a href="{:url('index/index/blog2',['id'=>1]);}">{$blog.title}</a></h3>
-			<div class="comments"><a href="#">11 Comments</a></div>
-			<div class="tags"><a href="#">photography,</a> <a href="#">manipulation,</a> <a href="#">journal</a></div>
-		</div>
-		<!-- End Meta -->
-		</div>
-		<div class="clear"></div>
-		<!-- End Info -->
-		
-		<p>{$blog.text}</p>
-		
-		</div>
-		<!-- End Post -->
-		{/volist}
-		<!-- Begin Post -->
-		<div class="post">
-		<!-- Begin Slider -->
-	<div class="slider">
-      
-      <div>
-        <img src="/tp5/public/static/images1/art/slide2.jpg" alt=""/>
-      </div>
-      
-      <div>
-        <img src="/tp5/public/static/images1/art/slide4.jpg" alt=""/>
-      </div>
-    </div>
-    <!-- End Slider -->
-		
-		<!-- Begin Info -->
-		<div class="info">
-		<!-- Begin Date -->
-		<div class="date">
-			<div class="day">24</div>
-			<div class="month">Sep</div>
-		</div>
-		<!-- End Date -->
-		
-		<!-- Begin Meta -->
-		<div class="meta">
-			<h3 class="title"><a href="post.html">Malesuada Condimentum Inceptos Vehicula</a></h3>
-			<div class="comments"><a href="#">13 Comments</a></div>
-			<div class="tags"><a href="#">photography,</a> <a href="#">manipulation,</a> <a href="#">journal</a></div>
-		</div>
-		<!-- End Meta -->
-		</div>
-		<div class="clear"></div>
-		<!-- End Info -->
-		
-		<p>Curabitur blandit tempus porttitor. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. <a href="post.html" class="more">Continue reading...</a></p>
-		
-		</div>
-		<!-- End Post -->
-		
-		<!-- Begin Post -->
-		<div class="post">
-		<a href="post.html"><img src="/tp5/public/static/images1/art/slide3.jpg" alt="" /></a>
-		
-		<!-- Begin Info -->
-		<div class="info">
-		<!-- Begin Date -->
-		<div class="date">
-			<div class="day">24</div>
-			<div class="month">Sep</div>
-		</div>
-		<!-- End Date -->
-		
-		<!-- Begin Meta -->
-		<div class="meta">
-			<h3 class="title"><a href="post.html">Malesuada Condimentum Inceptos Vehicula</a></h3>
-			<div class="comments"><a href="#">13 Comments</a></div>
-			<div class="tags"><a href="#">photography,</a> <a href="#">manipulation,</a> <a href="#">journal</a></div>
-		</div>
-		<!-- End Meta -->
-		</div>
-		<div class="clear"></div>
-		<!-- End Info -->
-		
-		<p>Curabitur blandit tempus porttitor. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-		
-		</div>
-		<!-- End Post -->
-		
-		<!-- Begin Post -->
-		<div class="post">
-		<a href="post.html"><img src="/tp5/public/static/images1/art/slide4.jpg" alt="" /></a>
-		
-		<!-- Begin Info -->
-		<div class="info">
-		<!-- Begin Date -->
-		<div class="date">
-			<div class="day">24</div>
-			<div class="month">Sep</div>
-		</div>
-		<!-- End Date -->
-		
-		<!-- Begin Meta -->
-		<div class="meta">
-			<h3 class="title"><a href="post.html">Malesuada Condimentum Inceptos Vehicula</a></h3>
-			<div class="comments"><a href="#">13 Comments</a></div>
-			<div class="tags"><a href="#">photography,</a> <a href="#">manipulation,</a> <a href="#">journal</a></div>
-		</div>
-		<!-- End Meta -->
-		</div>
-		<div class="clear"></div>
-		<!-- End Info -->
-		
-		<p>Curabitur blandit tempus porttitor. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-		
-		</div>
-		<!-- End Post -->
+	<div class="intro"></div>
+	<div class="post">
+	<p>
+
+	</p>	
+	</div>	
+	{/volist}
+	
 		
 		
 		
 		
-		 <!-- Begin Page Navi -->
-    			<div class="page-navi">
-    				<ul>
-    					<li><a href="#" class="current">1</a></li>
-    					<li><a href="#">2</a></li>
-    					<li><a href="#">3</a></li>
-    					<li><a href="#">â€?/a></li>
-    					<li><a href="#">Â»</a></li>
-    				</ul>
-    			</div>
-    			<!-- End Page Navi -->
+		
+		
+		
 		
 	<!-- Begin Footer -->
-    <div id="footer">
+   <!--  <div id="footer">
   	<div class="footer-box one-third">
   	<h3>Popular Posts</h3>
 			<ul class="popular-posts">
@@ -303,7 +171,7 @@
   	<p>Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit. </p>
   	<p>Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Curabitur blandit tempus porttitor.</p>
   	</div>
-    </div>
+    </div> -->
     <!-- End Footer -->
 		
 		
