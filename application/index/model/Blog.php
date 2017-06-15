@@ -10,5 +10,9 @@ class Blog extends Model {
 		$list = Db::table('test')->select();
 		return $list;
 	}
+	public static function blog2($id){
+		$list = Db::table('test')->where('id',$id)->select();
+		return $list;
+	}
 
 }

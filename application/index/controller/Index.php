@@ -3,6 +3,7 @@ namespace app\index\controller;
 use think\Input;
 use think\Controller;
 use think\Db;
+use think\Request;
 class Index extends Controller
 {
 
@@ -16,8 +17,9 @@ class Index extends Controller
     	return $this->fetch('blog');
     }
      public function blog2(){    
-        $id = request
-        trace($id);
+        $id=Request::instance()->param('id');
+        $list = \app\index\model\Blog::blog2($id);
+        $this->assign('list',$list);
         return $this->fetch('blog2');
     }
     public function diary(){
