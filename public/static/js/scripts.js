@@ -66,12 +66,10 @@ jQuery(document).ready(function($){
 /*-----------------------------------------------------------------------------------*/
 /*	PRETTYPHOTO
 /*-----------------------------------------------------------------------------------*/
+/*
 
-$(document).ready(function(){
-	$("a[rel^='prettyPhoto']").prettyPhoto({autoplay_slideshow: false, overlay_gallery: false, social_tools:false, deeplinking: false, theme:'pp_default', slideshow:5000});
-});
 
-/*-----------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------*/
 /*	PORTFOLIO
 /*-----------------------------------------------------------------------------------*/
 
@@ -187,8 +185,8 @@ $(document).ready(function() {
 /*	SLIDER
 /*-----------------------------------------------------------------------------------*/
 
-$(window).load(function() {
-			$('.flexslider').flexslider({
-				slideshowSpeed: 4000
-			});
-});
+// $(window).load(function() {
+// 			$('.flexslider').flexslider({
+// 				slideshowSpeed: 4000
+// 			});
+// });

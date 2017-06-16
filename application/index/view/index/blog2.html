@@ -3,10 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Caprice</title>
+{load href="/tp5/public/static/css/bootstrap.min.css" /}
 <link rel="shortcut icon" type="image/x-icon" href="/tp5/public/static/images1/favicon.png" />
 {load href="/tp5/public/static/css/style11.css" /}
 <link href='http://fonts.googleapis.com/css?family=Amaranth:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
 <!--[if IE 7]>
 <link rel="stylesheet" type="text/css" href="style/css/ie7.css" media="all" />
 <![endif]-->
@@ -16,14 +18,10 @@
 <!--[if IE 9]>
 <link rel="stylesheet" type="text/css" href="style/css/ie9.css" media="all" />
 <![endif]-->
-{load href="/tp5/public/static/js/jquery-1.6.4.min.js" /}
-{load href="/tp5/public/static/js/ddsmoothmenu.js" /}
-{load href="/tp5/public/static/js/jquery.jcarousel.js" /}
-{load href="/tp5/public/static/js/jquery.prettyPhoto.js" /}
-{load href="/tp5/public/static/js/carousel.js" /}
-{load href="/tp5/public/static/js/jquery.flexslider-min.js" /}
-{load href="/tp5/public/static/js/jquery.masonry.min.js" /}
-{load href="/tp5/public/static/js/jquery.slickforms.js" /}
+<style type="text/css">
+	
+body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;}
+</style>
 <!-- <script type="text/javascript" src="style/js/jquery-1.6.4.min.js"></script>
 <script type="text/javascript" src="style/js/ddsmoothmenu.js"></script>
 <script type="text/javascript" src="style/js/jquery.jcarousel.js"></script>
@@ -33,7 +31,7 @@
 <script type="text/javascript" src="style/js/jquery.masonry.min.js"></script>
 <script type="text/javascript" src="style/js/jquery.slickforms.js"></script> -->
 </head>
-<body>
+<body style="background: #f7f8fa!important">
 <!-- Begin Wrapper -->
 <div id="wrapper">
 	<!-- Begin Sidebar -->
@@ -107,16 +105,18 @@
 	<!-- End Sidebar -->
 	
 	<!-- Begin Content -->
+	
 	<div id="content">
 	{volist name='list' id='blog'}
-	<h1 class="title" style="text-align: center;">{$blog.title}</h1>
+	<h1 class="title" style="text-align: center;">{$blog.contentTitle}</h1>
 	<div class="line"></div>
 	<div class="intro"></div>
 	<div class="post">
 	<p>
-  {$blog.text}
+  {$blog.content}
 	</p>	
-	</div>	
+	</div>
+	
 	{/volist}
 	
 		
@@ -125,68 +125,60 @@
 		
 		
 		
-		
-		
-	<!-- Begin Footer -->
-   <!--  <div id="footer">
-  	<div class="footer-box one-third">
-  	<h3>Popular Posts</h3>
-			<ul class="popular-posts">
-				<li>
-					<a href="#"><img src="/tp5/public/static/images1/art/s1.jpg" alt="" /></a>
-					<h5><a href="#">Dolor Commodo Consectetur</a></h5>
-					<span>26 Aug 2013 | <a href="#">21 Comments</a></span>
-				</li>
-				
-				<li>
-					<a href="#"><img src="/tp5/public/static/images1/art/s2.jpg" alt="" /></a>
-					<h5><a href="#">Dolor Commodo Consectetur</a></h5>
-					<span>26 Aug 2013 | <a href="#">21 Comments</a></span>
-				</li>
-				
-				<li>
-					<a href="#"><img src="/tp5/public/static/images1/art/s3.jpg" alt="" /></a>
-					<h5><a href="#">Dolor Commodo Consectetur</a></h5>
-					<span>26 Aug 2013 | <a href="#">21 Comments</a></span>
-				</li>
+		<h2>评论区</h2>
+	<hr style="border: 1px dashed #CFCFCF;">	
 
-			</ul>
-  	</div>
-  	<div class="footer-box one-third">
-  	<h3>About</h3>
-  	<p>Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla.</p> 
-  	<p>Lorem Ipsum Dolor Sit
-          Moon Avenue No:11/21
-          Planet City, Earth<br>
-          <br>
-          <span class="lite1">Fax:</span> +555 797 534 01<br>
-          <span class="lite1">Tel:</span> +555 636 646 62<br>
-          <span class="lite1">E-mail:</span> name@domain.com</p>
-          
-          
-  	</div>
-  	
-  	<div class="footer-box one-third last">
-  	<h3>Custom Text</h3>
-  	<p>Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit. </p>
-  	<p>Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Curabitur blandit tempus porttitor.</p>
-  	</div>
-    </div> -->
+	<!-- Begin Footer -->
+	{volist name='commentList' id='comment'}
+     <div id="footer" style="margin-top: 5px">
+  		<div style="width: 90%;float: left;border: 1px dashed #CFCFCF;padding: 7px;display: table-cell;">
+  			<div style="width:10%;float: left;margin: 5px;margin-right: 15px;"><img src="/tp5/public/static/images/icon3.png"></div>	
+  			<div style="width:85%;float:left;margin: 5px;">
+  				<p style="margin-bottom: 10px">{$comment.createDate}</p>
+  				<h4><a href="#">游客</a></h4>
+  				<p style="word-wrap:break-word;word-break:break-all;">{$comment.content}
+  				</p>
+  			</div>
+  		</div>
+    </div> 
     <!-- End Footer -->
-		
-		
-	</div>
-	<!-- End Content -->
+	{/volist}	
+	<h2 style="margin-top: 50px">发表评论</h2>
+	<hr style="border: 1px dashed #CFCFCF;">
+	<div style="">
+		<form action="{:url('index/index/commitComm')}" method="post">
+ 
+			  <div class="form-group">
+			    <label for="exampleTextarea"></label>
+			    <textarea class="form-control" id="commentTextarea" rows="3" placeholder="输入评论" name="commentTextarea"></textarea>
+			    <input type="text" name="dataId" value="{$dataId}" style="display: none">
+			  </div>
+			  <button type="submit" class="btn btn-secondary">发表</button>
+		</form>
+	</div>	
 	
-</div>
+	<!-- End Content -->
+	</div>
+
 <!-- End Wrapper -->
 <div class="clear"></div>
+{load href="/tp5/public/static/js/jquery-3.1.1.min.js" /}
+{load href="/tp5/public/static/js/ddsmoothmenu.js" /}
+{load href="/tp5/public/static/js/jquery.jcarousel.js" /}
+{load href="/tp5/public/static/js/jquery.prettyPhoto.js" /}
+
+{load href="/tp5/public/static/js/jquery.flexslider-min.js" /}
+{load href="/tp5/public/static/js/jquery.masonry.min.js" /}
+{load href="/tp5/public/static/js/jquery.slickforms.js" /}
 {load href="/tp5/public/static/js/scripts.js" /}
 <!-- <script type="text/javascript" src="style/js/scripts.js"></script> -->
 <!--[if !IE]> -->
-{load href="/tp5/public/static/js/jquery.corner.js" /}
+<!-- {load href="/tp5/public/static/js/jquery.corner.js" /} -->
+{load href="/tp5/public/static/js/tether.min.js" /}
+{load href="/tp5/public/static/js/bootstrap.min.js" /}
+
 <!-- <script type="text/javascript" src="style/js/jquery.corner.js"></script> -->
 <!-- <![endif]-->
-<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+
 </body>
 </html>

@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>Caprice</title>
 <link rel="shortcut icon" type="image/x-icon" href="/tp5/public/static/images1/favicon.png" />
+<link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap-grid.min.css" rel="stylesheet">
 {load href="/tp5/public/static/css/style11.css" /}
 <link href='http://fonts.googleapis.com/css?family=Amaranth:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -37,7 +38,7 @@
 
 </script>
 </head>
-<body>
+<body style="font-family:"microsoft yahei"!important;">
 <!-- Begin Wrapper -->
 <div id="wrapper">
 	<!-- Begin Sidebar -->
@@ -118,7 +119,7 @@
 		
 		{volist name='list' id='blog'}
 		<!-- Begin Post -->
-		<div class="post">
+		<div class="post" style="border-top: 1px solid #eee;">
 		<!-- <a href="post.html"><img src="/tp5/public/static/images1/art/slide1.jpg" alt="" /></a> -->
 		
 		<!-- Begin Info -->
@@ -132,7 +133,7 @@
 		
 		<!-- Begin Meta -->
 		<div class="meta">
-			<h3 class="title"><a href="{:url('index/index/blog2',['id'=>$blog.id]);}" target="_blank">{$blog.title}</a></h3>
+			<h3 class="title"><a href="{:url('index/index/blog2',['dataId'=>$blog.dataId]);}" target="_blank" style="color: #259">{$blog.contentTitle}</a></h3>
 			<div class="comments"><a href="#">11 Comments</a></div>
 			<div class="tags"><a href="#">photography,</a> <a href="#">manipulation,</a> <a href="#">journal</a></div>
 		</div>
@@ -141,10 +142,11 @@
 		<div class="clear"></div>
 		<!-- End Info -->
 		
-		<p>{$blog.text}</p>
+		<p>{$blog.content}</p>
 		
 		</div>
 		<!-- End Post -->
+		
 		{/volist}
 		<!-- Begin Post -->
 		<div class="post">
@@ -253,8 +255,8 @@
     					<li><a href="#" class="current">1</a></li>
     					<li><a href="#">2</a></li>
     					<li><a href="#">3</a></li>
-    					<li><a href="#">�?/a></li>
-    					<li><a href="#">»</a></li>
+    					<li><a href="#">â€?/a></li>
+    					<li><a href="#">Â»</a></li>
     				</ul>
     			</div>
     			<!-- End Page Navi -->
