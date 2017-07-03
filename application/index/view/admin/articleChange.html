@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>blog</title>
+<link rel="shortcut icon" type="image/x-icon" href="/tp5/public/static/images1/favicon.png" />
+<link href="http://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap-grid.min.css" rel="stylesheet">
+<link href="http://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap-reboot.css" rel="stylesheet">
+<link href="http://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+{load href="/tp5/public/static/css/style11.css" /}
+<link href='http://fonts.googleapis.com/css?family=Amaranth:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="style/css/ie7.css" media="all" />
+<![endif]-->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="style/css/ie8.css" media="all" />
+<![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" type="text/css" href="style/css/ie9.css" media="all" />
+<![endif]-->
+
+{load href="/tp5/public/ckfinder/ckfinder.js"}
+<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+
+{load href="/tp5/public/static/js/jquery.jcarousel.js" /}
+{load href="/tp5/public/static/js/jquery.prettyPhoto.js" /}
+{load href="/tp5/public/static/js/carousel.js" /}
+{load href="/tp5/public/static/js/jquery.flexslider-min.js" /}
+{load href="/tp5/public/static/js/jquery.masonry.min.js" /}
+{load href="/tp5/public/static/js/jquery.slickforms.js" /}
+{load href="/tp5/public/static/js/myblog.js" /}
+<!-- <script type="text/javascript">
+  $(document).ready(function(){  
+    $("#submit").click(function(){
+    var id ={$id};
+    alert(id);
+    var title = $("#title").val();
+    var content=CKEDITOR.instances.content.getData();
+    console.log(title);
+    console.log(content);
+     $.post("{:url('index/admin/articleChange1')}",{content:content,title:title,id:id},function(data){
+          if(data==true){
+            alert("修改成功");
+          }
+      });
+    })
+  })
+  
+  </script>
+ -->
+</head>
+<body style="font-family:"microsoft yahei"!important;">
+<!-- Begin Wrapper -->
+<div id="wrapper">
+  <!-- Begin Sidebar -->
+  
+  <div class="wrapper">
+
+    <h1 class="title" style="text-align: center;font-size: 40px;margin-top: 10px">article修改</h1>
+
+    <div class="post" style="border-top: 1px solid #eee;position: static;margin-bottom: 0px">
+      <form>
+        <div class="form-group" style="">
+          <p>文章号:{$id}</p>
+          <p style="font-size: 25px;margin-left: 10px;margin-top: 10px;margin-bottom: 10px">title</p>
+            <input type="text" class="form-control" placeholder="Enter title" id="title" value="{$title}">
+          <p style="font-size: 25px;margin-left: 10px;margin-top: 10px;margin-bottom: 0px">内容</p>
+        </div>  
+      </form>
+    </div>
+  </div>
+
+  <!-- End Sidebar -->
+  
+  <!-- Begin Content -->
+ 
+   
+    <!-- Begin Post -->
+    
+    <!-- End Post -->
+    <div class="" style="">
+        <textarea name="content" style="overflow:auto!important" cols="20" rows="2" class="ckeditor" id="content">{$content}</textarea>
+   
+      {load href="/tp5/public/ckeditor/ckeditor.js"}
+    <script type="text/javascript">
+  CKEDITOR.replace( 'content' ,{ 
+        filebrowserBrowseUrl:'/tp5/public/ckfinder/ckfinder.html',
+        filebrowserImageBrowseUrl:'/tp5/public/ckfinder/ckfinder.html?type=Images',
+        filebrowserFlashBrowseUrl:'/tp5/public/ckfinder/ckfinder.html?type=Flash',
+        filebrowserUploadUrl : '/tp5/public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+
+       filebrowserImageUploadUrl : '/tp5/public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+        filebrowserFlashUploadUrl:'/tp5/public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash',       //设置默认宽度为900px
+        height:300,  //设置默认高度是300px，这个高度是不包含顶部菜单的高度
+        removeButtons:'Underline,Subscript,Superscript,About,Cut,Copy,Paste,PasteText,PasteFromWord,Link,Unlink,Anchor,Maximize,Source',
+        toolbarGroups: [ //在config.js设置无效，设置图标的位置
+    { name: 'links', groups: [ 'links' ] },
+    { name: 'forms', groups: [ 'forms' ] },
+    { name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
+    { name: 'tools', groups: [ 'tools' ] },
+    { name: 'others', groups: [ 'others' ] },
+    '/',
+    { name: 'clipboard', groups: [ 'clipboard', 'undo' ] },
+    { name: 'editing', groups: [ 'find', 'selection', 'spellchecker', 'editing' ] },
+    { name: 'insert', groups: [ 'insert' ] },
+    { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+    { name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi', 'paragraph' ] },
+    { name: 'styles', groups: [ 'styles' ] },
+    { name: 'colors', groups: [ 'colors' ] },
+    { name: 'about', groups: [ 'about' ] }
+  ]
+        }
+    );
+
+</script>
+</div>
+  <div style="">
+   <button class="btn btn-secondary" id="submit">提交文章</button>  
+   </div> 
+    <!-- Begin Post -->
+    
+    <!-- End Post -->
+    
+    <!-- Begin Post -->
+    
+    <!-- End Post -->
+    
+    
+    
+    
+     <!-- Begin Page Navi -->
+          
+          <!-- End Page Navi -->
+    
+  <!-- Begin Footer -->
+    
+    <!-- End Footer -->
+    
+    
+
+  <!-- End Content -->
+  
+</div>
+<!-- End Wrapper -->
+<div class="clear"></div>
+<!-- <script type="text/javascript" src="style/js/scripts.js"></script> -->
+<!--[if !IE]> -->
+<!-- <script type="text/javascript" src="style/js/jquery.corner.js"></script> -->
+<!-- <![endif]-->
+
+</body>
+</html>

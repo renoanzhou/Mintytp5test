@@ -1,13 +1,29 @@
-<!DOCTYPE html>
-<html>
-<head>
-{load href="/tp5/public/ckeditor/ckeditor.js"}
-	<title>欢迎</title>
-	
-</head>
-<body>
-<textarea class="form-control" rows="20" name="content" ></textarea> 
-<script type="text/javascript">CKEDITOR.replace('content',{height:'600'});</script>
-<div class="container"></div>
-</body>
-</html>
+{include file="admin/adminHead" title="admin" username="$username" /}
+  <!-- End Sidebar -->
+  
+  <!-- Begin Content -->
+  <div id="content">
+  <h1 class="title" style="font-size: 40px">主页</h1>
+  <div class="line"></div>
+  <p style="font-size: 15px"></p>
+    
+    
+    <!-- Begin Post -->
+    <div class="post" style="border-top: 1px solid #eee;">
+    <!-- <a href="post.html"><img src="/tp5/public/static/images1/art/slide1.jpg" alt="" /></a> -->
+    
+    <!-- Begin Info -->
+
+    <div class="clear"></div>
+    <!-- End Info -->
+    
+
+    
+    </div>
+
+  </div>
+  <!-- End Content -->
+  
+</div>
+<!-- End Wrapper -->
+{include file="admin/adminFoot"}

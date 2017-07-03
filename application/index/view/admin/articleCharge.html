@@ -1,0 +1,73 @@
+{include file="admin/adminHead" title="articleCharge"/}
+  <!-- End Sidebar -->
+  
+  <!-- Begin Content -->
+  <div id="content">
+  <h1 class="title" style="font-size: 40px">article管理</h1>
+
+    <hr>
+    <h3>article列表</h3>
+    <!-- Begin Post -->
+    <div class="post" style="border-top: 1px solid #eee;">
+    <!-- <a href="post.html"><img src="/tp5/public/static/images1/art/slide1.jpg" alt="" /></a> -->
+      
+   <table class="table" style="width: 500px;table-layout:fixed">
+  <thead class="thead-inverse">
+
+    <tr>
+      <th>dataId</th>
+      <th>title</th>
+      <th>content</th>
+      <th>createTime</th>
+      <th>operation</th>
+    </tr>
+  </thead>
+  {volist name="data" id='id'}
+  <tbody>
+  
+    <tr>
+      <th scope="row">{$id.dataId}</th>
+      <td style="overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">{$id.contentTitle}</td>
+      <td style="width: 100px;"><div style="height: 20px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">{$id.content}</div></td>
+      <td>{$id.createDate}</td>
+      <td><button onclick="ajaxDelete({$id.dataId})">删除</button>
+      <button onclick="ajaxChange({$id.dataId})">修改</button>
+      </td>
+    </tr>
+  
+  </tbody>
+  {/volist}
+</table>
+    <div class="page">{$data->render()}</div>
+    </div>
+    <!-- End Post -->
+    
+   
+    
+    
+    <!-- Begin Post -->
+    
+    <!-- End Post -->
+    
+    <!-- Begin Post -->
+    
+    <!-- End Post -->
+    
+    
+    
+    
+     <!-- Begin Page Navi -->
+          
+          <!-- End Page Navi -->
+    
+  <!-- Begin Footer -->
+    
+    <!-- End Footer -->
+    
+    
+  </div>
+  <!-- End Content -->
+  
+</div>
+<!-- End Wrapper -->
+{include file="admin/adminFoot"}

@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>blog</title>
+<link rel="shortcut icon" type="image/x-icon" href="/tp5/public/static/images1/favicon.png" />
+<link href="http://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap-grid.min.css" rel="stylesheet">
+<link href="http://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap-reboot.css" rel="stylesheet">
+<link href="http://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+{load href="/tp5/public/static/css/style11.css" /}
+<link href='http://fonts.googleapis.com/css?family=Amaranth:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="style/css/ie7.css" media="all" />
+<![endif]-->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="style/css/ie8.css" media="all" />
+<![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" type="text/css" href="style/css/ie9.css" media="all" />
+<![endif]-->
+
+{load href="/tp5/public/ckfinder/ckfinder.js"}
+<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+{load href="/tp5/public/static/js/ddsmoothmenu.js" /}
+{load href="/tp5/public/static/js/jquery.jcarousel.js" /}
+{load href="/tp5/public/static/js/jquery.prettyPhoto.js" /}
+{load href="/tp5/public/static/js/carousel.js" /}
+{load href="/tp5/public/static/js/jquery.flexslider-min.js" /}
+{load href="/tp5/public/static/js/jquery.masonry.min.js" /}
+{load href="/tp5/public/static/js/jquery.slickforms.js" /}
+{load href="/tp5/public/static/js/myblog.js" /}
+<!-- <script type="text/javascript">
+  $(document).ready(function(){  
+    $("#submit").click(function(){
+    var title = $("#title").val();
+    var content=CKEDITOR.instances.content.getData();
+    console.log(title);
+    console.log(content);
+     $.post("{:url('index/admin/addarticle')}",{content:content,title:title},function(data){
+        console.log(data);
+        if(data=="1"){
+          alert("添加成功");
+          location.reload() 
+        }else{
+          alert("添加失败");
+        }
+      });
+    })
+  });
+  $(document).ready(function(){
+    $("#menuBtn").click(function(){
+      if($("#sidebar").css("display")=="none"){
+        $("#sidebar").css("display","block");
+      
+      }else{
+         $("#sidebar").css("display","none");
+      }
+    })
+  });
+  </script> -->
+
+</head>
+<body style="font-family:"microsoft yahei"!important;">
+<!-- Begin Wrapper -->
+<div id="wrapper">
+  <!-- Begin Sidebar -->
+  <div id="sidebar" style="position:absolute;display: none;z-index: 4;background: #2E2E2E">
+     <div id="logo"><p style="color: white;font-size: 40px;text-align: center;margin-bottom: -10px"><!-- <img src="/tp5/public/static/images1/logo.png" alt="Caprice" /> -->后台管理</p></div>
+     
+  <!-- Begin Menu -->
+    <div id="menu" class="menu-v">
+      <ul>
+        <li><a href="admin" class="active">主页</a>
+          <!-- <ul> 悬浮弹框
+            <li><a href="index.html">Home w/ Carousel</a></li>
+            <li><a href="index2.html">Home w/ Portfolio</a></li>
+            <li><a href="index3.html">Home w/ Testimonials</a></li>
+          </ul> -->
+        </li>
+        <li><a href="article">article添加</a>
+          <!-- <ul>
+            <li><a href="portfolio.html">Portfolio 4 Columns</a></li>
+            <li><a href="portfolio2.html">Portfolio 3 Columns</a></li>
+            <li><a href="portfolio3.html">Portfolio 2 Columns</a></li>
+            <li><a href="portfolio4.html">Portfolio 1 Column</a></li>
+            <li><a href="portfolio-post.html">Portfolio Post</a></li>
+          </ul> -->
+        </li>
+        <li><a href="articleCharge">article管理</a>
+          <!-- <ul>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="blog2.html">Blog w/ Sidebar</a></li>
+            <li><a href="post.html">Post</a></li>
+            <li><a href="post2.html">Post w/ Sidebar</a></li>
+          </ul> -->
+        </li>
+        <li><a href="#"></a>
+          <!-- <ul>
+            <li><a href="buttons-boxes-images.html">Buttons Boxes Images</a></li>
+            <li><a href="tabs-toggle-table.html">Tabs Toggle Tables</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="typography.html">Typography</a></li>
+            <li><a href="service-icons.html">Service Icons</a></li>
+          </ul> -->
+        </li>
+        <li><a href="#"></a></li>
+      </ul>
+    </div>
+    <!-- End Menu -->
+    
+    
+    
+  <!--   <div class="sidebox">
+    <ul class="share">
+      <li><a href="#"><img src="/tp5/public/static/images1/icon-rss.png" alt="RSS" /></a></li>
+      <li><a href="#"><img src="/tp5/public/static/images1/icon-facebook.png" alt="Facebook" /></a></li>
+      <li><a href="#"><img src="/tp5/public/static/images1/icon-twitter.png" alt="Twitter" /></a></li>
+      <li><a href="#"><img src="/tp5/public/static/images1/icon-dribbble.png" alt="Dribbble" /></a></li>
+      <li><a href="#"><img src="/tp5/public/static/images1/icon-linkedin.png" alt="LinkedIn" /></a></li>
+    </ul>
+    </div> -->
+    
+    
+    
+  </div>
+  <div class="wrapper">
+  <button class="btn-sm btn-secondary" id="menuBtn" style="position: relative;z-index: 5">菜单</button>
+
+    <h1 class="title" style="text-align: center;font-size: 40px;margin-top: 10px">article添加</h1>
+
+    <div class="post" style="border-top: 1px solid #eee;position: static;margin-bottom: 0px">
+      <form>
+        <div class="form-group" style="">
+          <p style="font-size: 25px;margin-left: 10px;margin-top: 10px;margin-bottom: 10px">title</p>
+            <input type="text" class="form-control" placeholder="Enter title" id="title">
+          <p style="font-size: 25px;margin-left: 10px;margin-top: 10px;margin-bottom: 0px">内容</p>
+        </div>  
+      </form>
+    </div>
+  </div>
+
+  <!-- End Sidebar -->
+  
+  <!-- Begin Content -->
+ 
+   
+    <!-- Begin Post -->
+    
+    <!-- End Post -->
+    <div class="" style="">
+        <textarea name="content" style="overflow:auto!important" cols="20" rows="2" class="ckeditor" id="content"></textarea>
+   
+      {load href="/tp5/public/ckeditor/ckeditor.js"}
+    <script type="text/javascript">
+  CKEDITOR.replace( 'content' ,{ 
+        filebrowserBrowseUrl:'/tp5/public/ckfinder/ckfinder.html',
+        filebrowserImageBrowseUrl:'/tp5/public/ckfinder/ckfinder.html?type=Images',
+        filebrowserFlashBrowseUrl:'/tp5/public/ckfinder/ckfinder.html?type=Flash',
+        filebrowserUploadUrl : '/tp5/public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+
+       filebrowserImageUploadUrl : '/tp5/public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+        filebrowserFlashUploadUrl:'/tp5/public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash',       //设置默认宽度为900px
+        height:300,  //设置默认高度是300px，这个高度是不包含顶部菜单的高度
+        removeButtons:'Underline,Subscript,Superscript,About,Cut,Copy,Paste,PasteText,PasteFromWord,Link,Unlink,Anchor,Maximize,Source',
+        toolbarGroups: [ //在config.js设置无效，设置图标的位置
+    { name: 'links', groups: [ 'links' ] },
+    { name: 'forms', groups: [ 'forms' ] },
+    { name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
+    { name: 'tools', groups: [ 'tools' ] },
+    { name: 'others', groups: [ 'others' ] },
+    '/',
+    { name: 'clipboard', groups: [ 'clipboard', 'undo' ] },
+    { name: 'editing', groups: [ 'find', 'selection', 'spellchecker', 'editing' ] },
+    { name: 'insert', groups: [ 'insert' ] },
+    { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+    { name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi', 'paragraph' ] },
+    { name: 'styles', groups: [ 'styles' ] },
+    { name: 'colors', groups: [ 'colors' ] },
+    { name: 'about', groups: [ 'about' ] }
+  ]
+        }
+    );
+
+</script>
+</div>
+  <div style="">
+   <button class="btn btn-secondary" id="submit">提交文章</button>  
+   </div> 
+    <!-- Begin Post -->
+    
+    <!-- End Post -->
+    
+    <!-- Begin Post -->
+    
+    <!-- End Post -->
+    
+    
+    
+    
+     <!-- Begin Page Navi -->
+          
+          <!-- End Page Navi -->
+    
+  <!-- Begin Footer -->
+    
+    <!-- End Footer -->
+    
+    
+
+  <!-- End Content -->
+  
+</div>
+<!-- End Wrapper -->
+<div class="clear"></div>
+{load href="/tp5/public/static/js/scripts.js" /}
+<!-- <script type="text/javascript" src="style/js/scripts.js"></script> -->
+<!--[if !IE]> -->
+<!-- <script type="text/javascript" src="style/js/jquery.corner.js"></script> -->
+<!-- <![endif]-->
+
+</body>
+</html>

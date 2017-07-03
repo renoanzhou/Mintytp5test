@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+{load href="/tp5/public/ckfinder/ckfinder.js"}
+{load href="/tp5/public/static/css/bootstrap.min.css" /}
+<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+	<title>欢迎</title>
+	<script type="text/javascript">
+		$(document).ready(function(){
+          $("#test").click(function(){
+          	 var content = CKEDITOR.instances.content.getData();   //CKEDITOR.instances.控件ID.getData();
+            $.post("{:url('index/admin/ajaxtest')}",{content:content},function(data){
+            	console.log(data);
+               	$("#aaa").append(data);
+			});
+          })
+		})
+	</script>
+</head>
+<body>
+<form action="{:url('index/admin/ajaxtest')}" method="post">
+
+ <input type="submit" value="提交文章" id="submit"> 
+</form>
+<button id="test"> sad</button>
+<div class="container"
+ id="aaa">
+<table class="table" style="width: 900px;table-layout:fixed">
+  <thead class="thead-inverse" style="">
+
+    <tr>
+      <th style="width: 400px">dataId</th>
+      <th>title</th>
+      <th>content</th>
+      <th>createTime</th>
+      <th>operation</th>
+    </tr>
+  </thead>
+ 
+  <tbody>
+  
+    <tr>
+      <th scope="row">aa</th>
+      <td style="width: 20%">faf</td>
+      <td style="min-width: 10px">faf</td>
+      <td>afaf</td>
+      <td>ads
+      </td>
+    </tr>
+     <tr>
+      <th scope="row">aa</th>
+      <td>faf</td>
+      <div style="width: 10px!important"><td style="min-width: 10px!important">fafaaaaaaaaaaaaaaaaaaaaaa</td></div>
+      <td>afaf</td>
+      <td>ads
+      </td>
+    </tr>
+  
+  </tbody>
+
+</table>
+</div>
+<!-- <script type="text/javascript">
+	CKEDITOR.replace( 'content' ,{ 
+      	filebrowserBrowseUrl:'/tp5/public/ckfinder/ckfinder.html',
+        filebrowserImageBrowseUrl:'/tp5/public/ckfinder/ckfinder.html?type=Images',
+        filebrowserFlashBrowseUrl:'/tp5/public/ckfinder/ckfinder.html?type=Flash',
+        filebrowserUploadUrl : '/tp5/public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+
+  		 filebrowserImageUploadUrl : '/tp5/public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+        filebrowserFlashUploadUrl:'/tp5/public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash',
+        width:900,//设置默认宽度为900px
+        height:300,  //设置默认高度是300px，这个高度是不包含顶部菜单的高度
+        removeButtons:'Underline,Subscript,Superscript,About,Cut,Copy,Paste,PasteText,PasteFromWord,Link,Unlink,Anchor,Maximize,Source',
+        toolbarGroups: [ //在config.js设置无效，设置图标的位置
+		{ name: 'links', groups: [ 'links' ] },
+		{ name: 'forms', groups: [ 'forms' ] },
+		{ name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
+		{ name: 'tools', groups: [ 'tools' ] },
+		{ name: 'others', groups: [ 'others' ] },
+		'/',
+		{ name: 'clipboard', groups: [ 'clipboard', 'undo' ] },
+		{ name: 'editing', groups: [ 'find', 'selection', 'spellchecker', 'editing' ] },
+		{ name: 'insert', groups: [ 'insert' ] },
+		{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+		{ name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi', 'paragraph' ] },
+		{ name: 'styles', groups: [ 'styles' ] },
+		{ name: 'colors', groups: [ 'colors' ] },
+		{ name: 'about', groups: [ 'about' ] }
+	]
+        }
+    );
+	
+
+</script> -->
+</body>
+</html>
