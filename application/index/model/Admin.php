@@ -1,6 +1,7 @@
 <?php 
 namespace app\index\model;
 use think\Db;
+
 class Admin extends \think\Model
 {
 	
@@ -21,14 +22,19 @@ class Admin extends \think\Model
 		$lists=db::name('test')->where([])->order('dataId desc')->paginate(10);
 		return $lists;
 	}
-	public static function addArticleToBb($content,$title){
+	// public static function addArticleToBb($content,$title){
 
-		$data["dataId"] = time();
-		$data["content"] = $content;
-		$data["contentTitle"] = $title; 
-		$check=Db::table('test')->insert($data);
-		return $check;
-	}
+	// 	$data["dataId"] = time();
+	// 	$data["content"] = $content;
+	// 	$data["contentTitle"] = $title; 
+	// 	// $data = new Content;
+	// 	// $data->dataID = time();
+	// 	// $data->content = $content;
+	// 	// $data->contentTitle = $title;
+
+	// 	$check=Db::table('test')->insert($data);
+	// 	return $check;
+	// }
 	public static function queryArticle(){
 		$data=db::name('test')->where([])->order('dataId desc')->paginate(10);
 		return $data;
