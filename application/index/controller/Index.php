@@ -14,6 +14,17 @@ class Index extends Controller
     public function blog(){
         $list = \app\index\model\Blog::getText();
         $this->assign('list',$list);
+//          $test = "<script type=\"text/javascript\">
+    
+//     var test =document.getElementById(\"content\").getElementsByTagName(\"img\");
+//     for(var i=0;i<test.length;i++){
+//       test[i].style.height=\"100\";
+//       test[i].style.width=\"100\";
+// }
+// alert(\"aaaas\");
+// </script>";
+//         $this->test1 =$test; 
+//         $this->assign('test',$test);
     	return $this->fetch('blog');
     }
      public function blog2(){    
@@ -26,6 +37,7 @@ class Index extends Controller
         $this->assign('dataId',$dataId);
         $this->assign('list',$list);
         $this->assign('commentList',$commentList);
+       
         return $this->fetch('blog2');
     }
     public function commitComm(){

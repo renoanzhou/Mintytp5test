@@ -72,23 +72,14 @@
         		<li><a href="post2.html">Post w/ Sidebar</a></li>
         	</ul> -->
         </li>
-        <li><a href="#"></a>
-        	<!-- <ul>
-        		<li><a href="buttons-boxes-images.html">Buttons Boxes Images</a></li>
-        		<li><a href="tabs-toggle-table.html">Tabs Toggle Tables</a></li>
-        		<li><a href="testimonials.html">Testimonials</a></li>
-        		<li><a href="typography.html">Typography</a></li>
-        		<li><a href="service-icons.html">Service Icons</a></li>
-        	</ul> -->
-        </li>
-        <li><a href="#"></a></li>
+       
       </ul>
     </div>
     <!-- End Menu -->
     
     
     
-  <!--   <div class="sidebox">
+<!--     <div class="sidebox">
     <ul class="share">
     	<li><a href="#"><img src="/tp5/public/static/images1/icon-rss.png" alt="RSS" /></a></li>
     	<li><a href="#"><img src="/tp5/public/static/images1/icon-facebook.png" alt="Facebook" /></a></li>
@@ -190,6 +181,24 @@
 {load href="/tp5/public/static/js/jquery.corner.js" /}
 <!-- <script type="text/javascript" src="style/js/jquery.corner.js"></script> -->
 <!-- <![endif]-->
+<script type="text/javascript">
+    
+    var test =document.getElementById("content").getElementsByTagName("img");
+    for(var i=0;i<test.length;i++){
+      // test[i].style.height="100px";
+      // test[i].style.width="100px";
+      // test[i].
+      var te = test[i];
+     test[i].onclick=function(te){
+        te.style.height="100px";
+        te.style.width="100px";
+     }
 
+      console.log("success");
+}
+alert("aa");
+function method1(a)
+{a.style.height="100px";test[i].style.width="100px";}
+</script>
 </body>
 </html>

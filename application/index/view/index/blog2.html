@@ -8,6 +8,14 @@
 {load href="/tp5/public/static/css/style11.css" /}
 <link href='http://fonts.googleapis.com/css?family=Amaranth:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+{load href="/tp5/public/static/js/jquery-1.6.4.min.js" /}
+{load href="/tp5/public/static/js/ddsmoothmenu.js" /}
+{load href="/tp5/public/static/js/jquery.jcarousel.js" /}
+{load href="/tp5/public/static/js/jquery.prettyPhoto.js" /}
+{load href="/tp5/public/static/js/carousel.js" /}
+{load href="/tp5/public/static/js/jquery.flexslider-min.js" /}
+{load href="/tp5/public/static/js/jquery.masonry.min.js" /}
+{load href="/tp5/public/static/js/jquery.slickforms.js" /}
 
 <!--[if IE 7]>
 <link rel="stylesheet" type="text/css" href="style/css/ie7.css" media="all" />
@@ -18,10 +26,10 @@
 <!--[if IE 9]>
 <link rel="stylesheet" type="text/css" href="style/css/ie9.css" media="all" />
 <![endif]-->
-<style type="text/css">
+<!-- <style type="text/css">
 	
 body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;}
-</style>
+</style> -->
 <!-- <script type="text/javascript" src="style/js/jquery-1.6.4.min.js"></script>
 <script type="text/javascript" src="style/js/ddsmoothmenu.js"></script>
 <script type="text/javascript" src="style/js/jquery.jcarousel.js"></script>
@@ -36,28 +44,29 @@ body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { font-family: Micro
 <div id="wrapper">
 	<!-- Begin Sidebar -->
 	<div id="sidebar">
-		 <div id="logo"><a href="index.html"><img src="/tp5/public/static/images1/logo.png" alt="Caprice" /></a></div>
+     <div id="logo"><p style="color: white;font-size: 40px;text-align: center;margin-bottom: -10px"><!-- <img src="/tp5/public/static/images1/logo.png" alt="Caprice" /> -->My Blog</p></div>
 		 
 	<!-- Begin Menu -->
     <div id="menu" class="menu-v">
       <ul>
-        <li><a href="index.html" class="active">Home</a>
-        	<ul>
+        <li><a href="{:url('index/index/blog')}" class="active">Blog</a>
+          <!-- 原生模板的弹出框，已关闭-->
+        	<!-- <ul>
         		<li><a href="index.html">Home w/ Carousel</a></li>
         		<li><a href="index2.html">Home w/ Portfolio</a></li>
         		<li><a href="index3.html">Home w/ Testimonials</a></li>
-        	</ul>
+        	</ul> -->
         </li>
-        <li><a href="portfolio.html">Portfolio</a>
-        	<ul>
+        <li><a href="portfolio.html">Diary</a>
+        	<!-- <ul>
         		<li><a href="portfolio.html">Portfolio 4 Columns</a></li>
         		<li><a href="portfolio2.html">Portfolio 3 Columns</a></li>
         		<li><a href="portfolio3.html">Portfolio 2 Columns</a></li>
         		<li><a href="portfolio4.html">Portfolio 1 Column</a></li>
         		<li><a href="portfolio-post.html">Portfolio Post</a></li>
-        	</ul>
+        	</ul> -->
         </li>
-        <li><a href="blog.html">Blog</a>
+        <li><a href="blog.html">My Plan</a>
         	<ul>
         		<li><a href="blog.html">Blog</a></li>
         		<li><a href="blog2.html">Blog w/ Sidebar</a></li>
@@ -65,7 +74,7 @@ body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { font-family: Micro
         		<li><a href="post2.html">Post w/ Sidebar</a></li>
         	</ul>
         </li>
-        <li><a href="buttons-boxes-images.html">Features</a>
+        <!-- <li><a href="buttons-boxes-images.html">Features</a>
         	<ul>
         		<li><a href="buttons-boxes-images.html">Buttons Boxes Images</a></li>
         		<li><a href="tabs-toggle-table.html">Tabs Toggle Tables</a></li>
@@ -74,14 +83,14 @@ body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { font-family: Micro
         		<li><a href="service-icons.html">Service Icons</a></li>
         	</ul>
         </li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li> -->
       </ul>
     </div>
     <!-- End Menu -->
     
     
     
-    <div class="sidebox">
+    <!-- <div class="sidebox">
     <ul class="share">
     	<li><a href="#"><img src="/tp5/public/static/images1/icon-rss.png" alt="RSS" /></a></li>
     	<li><a href="#"><img src="/tp5/public/static/images1/icon-facebook.png" alt="Facebook" /></a></li>
@@ -89,7 +98,7 @@ body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { font-family: Micro
     	<li><a href="#"><img src="/tp5/public/static/images1/icon-dribbble.png" alt="Dribbble" /></a></li>
     	<li><a href="#"><img src="/tp5/public/static/images1/icon-linkedin.png" alt="LinkedIn" /></a></li>
     </ul>
-    </div>
+    </div> -->
     
     <div class="sidebox">
     <div class="search">
@@ -162,21 +171,10 @@ body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { font-family: Micro
 
 <!-- End Wrapper -->
 <div class="clear"></div>
-{load href="/tp5/public/static/js/jquery-3.1.1.min.js" /}
-{load href="/tp5/public/static/js/ddsmoothmenu.js" /}
-{load href="/tp5/public/static/js/jquery.jcarousel.js" /}
-{load href="/tp5/public/static/js/jquery.prettyPhoto.js" /}
-
-{load href="/tp5/public/static/js/jquery.flexslider-min.js" /}
-{load href="/tp5/public/static/js/jquery.masonry.min.js" /}
-{load href="/tp5/public/static/js/jquery.slickforms.js" /}
 {load href="/tp5/public/static/js/scripts.js" /}
 <!-- <script type="text/javascript" src="style/js/scripts.js"></script> -->
 <!--[if !IE]> -->
-<!-- {load href="/tp5/public/static/js/jquery.corner.js" /} -->
-{load href="/tp5/public/static/js/tether.min.js" /}
-{load href="/tp5/public/static/js/bootstrap.min.js" /}
-
+{load href="/tp5/public/static/js/jquery.corner.js" /}
 <!-- <script type="text/javascript" src="style/js/jquery.corner.js"></script> -->
 <!-- <![endif]-->
 
