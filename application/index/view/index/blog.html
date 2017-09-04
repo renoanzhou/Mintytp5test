@@ -182,23 +182,25 @@
 <!-- <script type="text/javascript" src="style/js/jquery.corner.js"></script> -->
 <!-- <![endif]-->
 <script type="text/javascript">
-    
+    // 点击图片变大变小，默认图片为200px.
     var test =document.getElementById("content").getElementsByTagName("img");
     for(var i=0;i<test.length;i++){
-      // test[i].style.height="100px";
-      // test[i].style.width="100px";
-      // test[i].
-      var te = test[i];
-     test[i].onclick=function(te){
-        te.style.height="100px";
-        te.style.width="100px";
+      test[i].style.height="200px";//设置图片的默认大小
+      test[i].style.width="200px";
+      
+      var tes = test[i];
+     test[i].onclick=function(){
+        if(this.style.width=="200px"){
+        this.style.width="400px";//点击后的大小
+        this.style.height="400px";
+       }else{
+        this.style.width="200px";
+        this.style.height="200px";
+       }
      }
-
-      console.log("success");
 }
-alert("aa");
-function method1(a)
-{a.style.height="100px";test[i].style.width="100px";}
+
+
 </script>
 </body>
 </html>
