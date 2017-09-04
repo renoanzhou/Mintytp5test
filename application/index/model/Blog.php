@@ -26,5 +26,6 @@ class Blog extends Model {
 		$check=db('commenttest')->insert($data);
 		return $check;
 	}
+	
 
 }
