@@ -6,6 +6,7 @@ use think\Request;
 use Exception;
 use think\view;
 use app\index\model\Login;
+use app\index\model\blogContent as Content;
 class Admin extends Controller{
 	// public function changepswp(){
 	// 	return $this->fetch();
@@ -14,37 +15,56 @@ class Admin extends Controller{
 		if(Session::has('username')){
 			$this->success("已登录，跳转至管理页面",'tp5/public/index/admin/admin');
 		}
+		
 		return $this->fetch();
 	}
-	public function logining(){
+	// public function logining(){
 
-		$username=Request::instance()->param('username');
-		$password=Request::instance()->param('password');
-		$check=Login::login($username,$password);
-		if($check){
-			$this->success("修改成功",'tp5/public/index/admin/admin');
-		}else{
-			$this->error("有误");
-		}
-	}
+	// 	// $username=Request::instance()->param('username');
+	// 	// $password=Request::instance()->param('password');
+	// 	// $check=Login::logining($username,$password);
+	// 	// if($check){
+	// 	// 	$this->success("修改成功",'tp5/public/index/admin/admin');
+	// 	// }else{
+	// 	// 	$this->error("有误");
+	// 	// }
+	// }
+	public function logining(){
+    	$username = input('post.username');
+    	$password = input('post.password');
+
+    	$check = \app\index\model\Login::login($username,$password);
+    	if($check){
+    		header('Location:/tp5/public/index/admin/admin');
+            exit();
+    	}else{
+    		return $this->error("用户名错误或密码错误","Login/login");
+    	}
+    }
 	public function article(){
 
 		if(!Session::has('username')){
 			$this->error("出错！");
 		}
-		$this->assign('username',getUserName());
+		$this->assign('username',Session::get('username.username'));
 		return $this->fetch();
 	}
-	public function getUserName(){
-		return Session::get('username.username');
-	}
+	// public function getUserName(){
+	// 	return Session::get('username.username');
+	// }
 	public function addarticle(){
 		if(!Session::has('username')){
 			$this->error("出错！");
 		}
-	  $content=Request::instance()->param('content');
+
+	   $content=Request::instance()->param('content');
 	   $title=Request::instance()->param('title');
-	   $check = \app\index\model\Admin::addArticleToBb($content,$title);
+	   $blogContent = new Content;
+	   $blogContent->content = $content;
+	   $blogContent->contentTitle = $title;
+	   $blogContent->dataId = time();
+	   $check = $blogContent->save();
+	   // $check = \app\index\model\Admin::addArticleToBb($content,$title);  //旧方法抛弃
 	   return $check;
 	}
 	public function articleCharge(){
@@ -62,7 +82,7 @@ class Admin extends Controller{
 		// 	}
 		// 	$data[$a]["content"]=implode("",$arr1);
 		// }
-		$this->assign('username',Admin::getUserName());
+		$this->assign('username',Session::get('username.username'));
 		$this->assign('data',$data);
 		return $this->fetch();
 	}
@@ -91,8 +111,8 @@ class Admin extends Controller{
 		}
 		$view = new View();
 		$view->name ='' ;
-		$view->assign('username',Admin::getUserName());
-		dump(Admin::getUserName());
+		$view->assign('username',Session::get('username.username'));
+		dump(Session::get('username.username'));
 		return $view->fetch();
 	}
 	public function deleteArticle(){ //删除article，接受post
