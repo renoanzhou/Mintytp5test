@@ -29,26 +29,7 @@
 {load href="/tp5/public/static/js/jquery.flexslider-min.js" /}
 {load href="/tp5/public/static/js/jquery.masonry.min.js" /}
 {load href="/tp5/public/static/js/jquery.slickforms.js" /}
-{load href="/tp5/public/static/js/myblog.js" /}
-<!-- <script type="text/javascript">
-  $(document).ready(function(){  
-    $("#submit").click(function(){
-    var id ={$id};
-    alert(id);
-    var title = $("#title").val();
-    var content=CKEDITOR.instances.content.getData();
-    console.log(title);
-    console.log(content);
-     $.post("{:url('index/admin/articleChange1')}",{content:content,title:title,id:id},function(data){
-          if(data==true){
-            alert("修改成功");
-          }
-      });
-    })
-  })
-  
-  </script>
- -->
+  {load href="/tp5/public/static/js/myblog.js" /}
 </head>
 <body style="font-family:"microsoft yahei"!important;">
 <!-- Begin Wrapper -->
@@ -62,7 +43,7 @@
     <div class="post" style="border-top: 1px solid #eee;position: static;margin-bottom: 0px">
       <form>
         <div class="form-group" style="">
-          <p>文章号:{$id}</p>
+          <p>文章号:<div id="articleId">{$id}</div></p>
           <p style="font-size: 25px;margin-left: 10px;margin-top: 10px;margin-bottom: 10px">title</p>
             <input type="text" class="form-control" placeholder="Enter title" id="title" value="{$title}">
           <p style="font-size: 25px;margin-left: 10px;margin-top: 10px;margin-bottom: 0px">内容</p>

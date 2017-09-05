@@ -143,7 +143,7 @@ class Admin extends Controller{
 		$data=\app\index\model\Admin::articleChange($id);
 		 $this->assign('content',$data[0]["content"]);
 		 $this->assign('title',$data[0]["contentTitle"]);
-		 $this->assign('username',getUserName());
+		 $this->assign('username',Session::get('username.username'));
 		 $this->assign('id',$id);
 		return $this->fetch();		
 	}

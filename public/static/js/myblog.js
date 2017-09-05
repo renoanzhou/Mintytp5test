@@ -25,35 +25,34 @@
  //      }
  //    })
  //  });
-  //   function ajaxDelete(id){
-  //   var id=id;
-  //   $.post("{:url('index/admin/deleteArticle')}",{id:id},function(data){
-  //       if(data==true){
-  //         alert("删除成功");
-  //         location.reload() 
-  //       }else{
-  //         alert("删除失败");
-  //       }
-  //     });
-  // }
-  // function ajaxChange(id){
-  //   var id=id;
-  //   location.href="/tp5/public/index/admin/articleChange?id="+id;
+ 
+    function ajaxDelete(id){   //删除博客
+    var id=id;
+    $.post("deleteArticle",{id:id},function(data){    //容易出现post问题，应为路径问题
+        if(data==true){
+          alert("删除成功");
+          location.reload() 
+        }else{
+          alert("删除失败");
+        }
+      });
+  }
+  function ajaxChange(id){
+    var id=id;
+    location.href="/tp5/public/index/admin/articleChange?id="+id;
 
-  // }
-  //  $(document).ready(function(){  
-  //   $("#submit").click(function(){
-  //   var id ={$id};
-  //   alert(id);
-  //   var title = $("#title").val();
-  //   var content=CKEDITOR.instances.content.getData();
-  //   console.log(title);
-  //   console.log(content);
-  //    $.post("{:url('index/admin/articleChange1')}",{content:content,title:title,id:id},function(data){
-  //         if(data==true){
-  //           alert("修改成功");
-  //         }
-  //     });
-  //   })
-  // })
+  }
+
+   $(document).ready(function(){  
+    $("#submit").click(function(){
+    var id =$("#articleId").text();//从网页文章号里获得id.
+    var title = $("#title").val();
+    var content=CKEDITOR.instances.content.getData();;
+     $.post("articleChange1",{content:content,title:title,id:id},function(data){
+          if(data==true){
+            alert("修改成功");
+          }
+      });
+    })
+  })
   
