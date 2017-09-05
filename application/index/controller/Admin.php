@@ -15,7 +15,6 @@ class Admin extends Controller{
 		if(Session::has('username')){
 			$this->success("已登录，跳转至管理页面",'tp5/public/index/admin/admin');
 		}
-		
 		return $this->fetch();
 	}
 	// public function logining(){
@@ -105,7 +104,7 @@ class Admin extends Controller{
 	// 	}
 	// }
 	
-	public function admin(){
+	public function index(){
 		if(!Session::has('username')){
 			$this->error("出错！");
 		}
