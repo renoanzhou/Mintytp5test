@@ -11,12 +11,12 @@ class Admin extends Controller{
 	// public function changepswp(){
 	// 	return $this->fetch();
 	// }
-	public function login(){
-		if(Session::has('username')){
-			$this->success("已登录，跳转至管理页面",'tp5/public/index/admin/admin');
-		}
-		return $this->fetch();
-	}
+	// public function login(){
+	// 	if(Session::has('username')){
+	// 		$this->success("已登录，跳转至管理页面",'tp5/public/index/admin/admin');
+	// 	}
+	// 	return $this->fetch();
+	// }
 	// public function logining(){
 
 	// 	// $username=Request::instance()->param('username');
@@ -28,25 +28,25 @@ class Admin extends Controller{
 	// 	// 	$this->error("有误");
 	// 	// }
 	// }
-	public function logining(){
-    	$username = input('post.username');
-    	$password = input('post.password');
+	// public function logining(){
+ //    	$username = input('post.username');
+ //    	$password = input('post.password');
 
-    	$check = \app\index\model\Login::login($username,$password);
-    	if($check){
-    		header('Location:/tp5/public/index/admin/admin');
-            exit();
-    	}else{
-    		return $this->error("用户名错误或密码错误","Login/login");
-    	}
-    }
-	public function article(){
+ //    	$check = \app\index\model\Login::login($username,$password);
+ //    	if($check){
+ //    		header('Location:/tp5/public/index/admin/admin');
+ //            exit();
+ //    	}else{
+ //    		return $this->error("用户名错误或密码错误","Login/login");
+ //    	}
+ //    }
+	public function addArticlepage(){
 
 		if(!Session::has('username')){
 			$this->error("出错！");
 		}
 		$this->assign('username',Session::get('username.username'));
-		return $this->fetch();
+		return $this->fetch('article');
 	}
 	// public function getUserName(){
 	// 	return Session::get('username.username');
@@ -111,7 +111,7 @@ class Admin extends Controller{
 		$view = new View();
 		$view->name ='' ;
 		$view->assign('username',Session::get('username.username'));
-		dump(Session::get('username.username'));
+		// dump(Session::get('username.username'));
 		return $view->fetch();
 	}
 	public function deleteArticle(){ //删除article，接受post
@@ -131,7 +131,7 @@ class Admin extends Controller{
 			$this->error("出错！");
 		}
 	  session(null);
-	  $this->success("退出成功",'/tp5/public/index/admin/login');
+	  $this->success("退出成功",'/tp5/public/index/adminlogin/login');
 	}
 	public function articleChange(){ 
 	  //修改article页面，负责从数据库拿数据并放入页面

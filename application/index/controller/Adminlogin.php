@@ -19,13 +19,18 @@ class Adminlogin extends Controller{
 		$un = input('post.un');
     	$pw = input('post.pw');
     	$user = User::get($un); //查询
+
     	if($user!=null){
+            
     		if($user->password==$pw){
-    		  unset($user->password);//清空密码
+            
+                
+    		   unset($user->password);//清空密码
     		  session("username",$user);
-    		  $this->success("登录成功",'tp5/public/index/admin/index');
+              return true;
+    		    // $this->success("登录成功",'tp5/public/index/admin/index');
     		}else{
-    		  $this->error("用户名或密码错误","login");	
+    		  	return false;
     		}
     	}else{
     		// $this->error("用户名或密码错误","login");
@@ -33,6 +38,10 @@ class Adminlogin extends Controller{
     		return false;
     	}
 	}
+
+    public function successt(){
+      $this->success("登陆成功",'tp5/public/index/admin/index');
+    }
 
 }	
  ?>
