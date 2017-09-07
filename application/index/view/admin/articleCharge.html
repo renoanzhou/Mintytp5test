@@ -1,5 +1,5 @@
-{include file="admin/adminHead" title="articleCharge"/}
-  <!-- End Sidebar -->
+
+{include file="admin/adminHead" title="articleCharge"/}  <!-- End Sidebar -->
   
   <!-- Begin Content -->
   <div id="content">
@@ -14,11 +14,12 @@
    <table class="table" style="width: 500px;table-layout:fixed">
   <thead class="thead-inverse">
 
-    <tr>
-      <th>dataId</th>
+    <tr style="width: 100%">
+      <th style="width: 95px">dataId</th>
       <th>title</th>
       <th>content</th>
       <th>createTime</th>
+      <th>updateTime</th>
       <th>operation</th>
     </tr>
   </thead>
@@ -28,8 +29,9 @@
     <tr>
       <th scope="row">{$id.dataId}</th>
       <td style="overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">{$id.contentTitle}</td>
-      <td style="width: 100px;"><div style="height: 20px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">{$id.content}</div></td>
+      <td ><div style="height: 20px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">{$id.content}</div></td>
       <td>{$id.createDate}</td>
+      <td>{$id.update_time}</td>
       <td><button onclick="ajaxDelete({$id.dataId})">删除</button>
       <button onclick="ajaxChange({$id.dataId})">修改</button>
       </td>

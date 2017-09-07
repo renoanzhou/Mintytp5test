@@ -10,6 +10,7 @@
             document.getElementById("wrongTips").style.display="block"; 
            setTimeout('a()',3000); 
         }else if(data==true){
+          
           window.location.href='successt';
         }
       });

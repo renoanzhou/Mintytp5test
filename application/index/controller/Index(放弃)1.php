@@ -13,25 +13,25 @@ class Index extends Controller
     {
         return $this->fetch();
     }
-    public function blog(){
-        $list = Content::all(); //使用blogContent的all方法获取所有blog内容
-        $this->assign('list',$list);
-//-------------------------------------------------------
-// $list = \app\index\model\Blog::getText(); //旧方法已放弃
-//          $test = "<script type=\"text/javascript\">
+//     public function blog(){
+//         // $list = Content::all(); //使用blogContent的all方法获取所有blog内容
+//         // $this->assign('list',$list);
+// //-------------------------------------------------------
+// // $list = \app\index\model\Blog::getText(); //旧方法已放弃
+// //          $test = "<script type=\"text/javascript\">
     
-//     var test =document.getElementById(\"content\").getElementsByTagName(\"img\");
-//     for(var i=0;i<test.length;i++){
-//       test[i].style.height=\"100\";
-//       test[i].style.width=\"100\";
-// }
-// alert(\"aaaas\");
-// </script>";
-//         $this->test1 =$test; 
-//         $this->assign('test',$test);
-// ----------------------------------------------------------
-    	return $this->fetch('blog');
-    }
+// //     var test =document.getElementById(\"content\").getElementsByTagName(\"img\");
+// //     for(var i=0;i<test.length;i++){
+// //       test[i].style.height=\"100\";
+// //       test[i].style.width=\"100\";
+// // }
+// // alert(\"aaaas\");
+// // </script>";
+// //         $this->test1 =$test; 
+// //         $this->assign('test',$test);
+// // ----------------------------------------------------------
+//     	// return $this->fetch('blog');
+//     }
      public function blog2(){    
         $dataId=Request::instance()->param('dataId');
         if(!isset($dataId)){
@@ -68,8 +68,8 @@ class Index extends Controller
     }
 
     // $check =  \app\index\model\Blog::submitComm($data); 旧方法 已放弃
-    public function diary(){
-    	 return $this->fetch('Diary');
+    public function Download(){
+    	 return $this->fetch('download');
     }
     
 }

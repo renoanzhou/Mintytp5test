@@ -153,8 +153,11 @@ class Admin extends Controller{
 		$content=Request::instance()->param('content');
 	   $title=Request::instance()->param('title');
 	   $id=Request::instance()->param('id');
-	   $check=\app\index\model\Admin::articleChange1($id,$content,$title);
-	   if($check){
+	   // $check=\app\index\model\Admin::articleChange1($id,$content,$title);
+	   $test = Content::get($id);
+	   $test->contentTitle = $title;
+	   $test->content = $content;//
+	    if($test->save()){
 	     return true;
 	   }else{
 	   	$this->error("修改失败...");

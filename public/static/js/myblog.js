@@ -51,6 +51,8 @@
      $.post("articleChange1",{content:content,title:title,id:id},function(data){
           if(data==true){
             alert("修改成功");
+             window.location.href="/tp5/public/index/admin/articlecharge";
+
           }
       });
     })
